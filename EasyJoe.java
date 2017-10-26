@@ -10,7 +10,8 @@ public class EasyJoe {
 	
 	q = new LinkedList<Integer>();
 	init(n);
-	System.out.println(findSurvivor());
+	//System.out.println(findSurvivor());
+	System.out.println(findSurvivorFormula(n));
 	
   }
 	//[0, 0, 0, 0, 1]
@@ -21,7 +22,7 @@ public class EasyJoe {
 		}
 	}
 	
-	
+	//algorithmic starts at 0
 	public static int findSurvivor(){
 		//indicates first should be saved
 		boolean s = false;
@@ -71,6 +72,17 @@ public class EasyJoe {
 		}
 		return q.poll();
 		
+	}
+	
+	public static int findSurvivorFormula(int n){
+		//formulaic assumes it starts at 1
+		int i;
+		for(i=2; i<n; i*=2){
+			
+		}
+		i/=2;
+		System.out.println(i);
+		return 1 + (2*(n-i));
 	}
   
 }
