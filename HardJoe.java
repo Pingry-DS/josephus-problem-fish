@@ -1,17 +1,19 @@
 
 public class HardJoe {
 
-  private static int[] arr;
-
   public static void main(String[] args) {
     int n = Integer.parseInt(args[0]);
 	
 	System.out.println(linkedmethod(n));
 	
-	
   }
 	
 	public static int linkedmethod(int n){
+		switch(n){
+			case 1: return 1;
+			case 2: return 1;
+			case 3: return 3;
+		}
 		//case even: go 1-2-skip
 		//case odd: go 2-skip-1-2
 		boolean a = false, b = false;
@@ -32,7 +34,7 @@ public class HardJoe {
 				b = false;
 			}
 		}
-		return soldiers.getCurrent().getValue() - 1;//idk why but ok it works
+		return soldiers.getCurrent().getValue();
 	}
 	
 
@@ -66,7 +68,7 @@ class LinkedList{
 	}
 	
 	public void initCurrent(){
-		for(int x = size/2 - 1;x>0; x--){
+		for(int x = size/2 - 2;x>0; x--){
 			current = current.getNext();
 		}
 	}
