@@ -12,6 +12,19 @@ public class HardJoe {
   }
 	
 	public static int linkedmethod(int n){
+		
+		if (n == 1 || n == 2)
+		{
+			return 1;
+		}
+		
+		if (n == 3)
+		{
+			return 3;
+		}
+		
+		
+		
 		//case even: go 1-2-skip
 		//case odd: go 2-skip-1-2
 		boolean a = false, b = false;
