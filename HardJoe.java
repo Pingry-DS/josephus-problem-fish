@@ -14,6 +14,7 @@ public class HardJoe {
 			case 2: return 1;
 			case 3: return 3;
 		}
+
 		//case even: go 1-2-skip
 		//case odd: go 2-skip-1-2
 		boolean a = false, b = false;
@@ -88,68 +89,7 @@ class LinkedList{
 	
 	
 }
-/*
-class LinkedList{
-	private Node head;
-	//private Node tail;
-	//don't need a tail; just size
-	private Node current;
-	private int size;
-	
-	
-	//precondition: n>=1
-	public LinkedList(int n){
-		Node prev = new Node(n);
-		for(int i=n-1; i>0; i--){
-			current = new Node(i, prev);
-		}
-		head = current;
-		size = n;
-		initCurrent();
-	}
-	
-	public Node getHead(){
-		return head;
-	}
-	
-	public Node getCurrent(){
-		return current;
-	}
-	
-	public int size(){
-		return size;
-	}
-	
-	public void initCurrent(){
-		for(int x = size/2 - 1;x>0; x--){
-			current = current.getNext();
-		}
-	}
-	
-	//METHODS
-	
-	//removes next in line
-	public void removeNext(){
-		System.out.println(current.getValue());
-		if(current.getNext() == null){
-			head = head.getNext();
-		}else{
-			current.setNext(current.getNext().getNext());
-		}
-		size--;
-	}
-	
-	//increments current position
-	public void skip(){
-		if(current.getNext() == null){
-			current = head;
-		}else{
-			current = current.getNext();
-		}
-	}
-	
-	
-}*/
+
 
 class Node{
 	
